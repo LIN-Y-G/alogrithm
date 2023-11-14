@@ -1,0 +1,16 @@
+#feibonacci
+#method1  a and b variable values exchange
+a ,b = 0 ,1
+while b > 10:
+  print(b)
+  a , b = b ,b+a
+
+  #method2  use recursie method
+  def fab (n):
+    if n ==1 or n ==2:
+      return 1
+    else:
+      return fab(n-1) + fab(n-2)
+  
+    
+  
