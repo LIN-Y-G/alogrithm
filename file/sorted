@@ -26,6 +26,18 @@ for i in range(1, n+1):
     result.append(fab(i))
 
 print(result)
+#method3 use dictionry
+n = int(input('请输入一个整数:'))  # 获取用户输入的整数
+dic = {0: 0, 1: 1}  # 创建一个字典，包含两个键值对
+def fib(n):  # 定义一个递归函数，用于计算斐波那契数列的第n个数
+    if n in dic:  # 如果n在字典中已存在，则直接返回字典中的值
+        return dic[n]
+    else:  # 如果n在字典中不存在，则计算斐波那契数列的第n个数
+        temp = fib(n-1) + fib(n-2)  # 递归调用fib函数计算前两个数的和
+        dic[n] = temp  # 将计算结果存入字典中
+        return temp  # 返回计算结果
+for i in range(n):  # 循环n次
+    print(fib(i+1), end=" ")  # 打印第i+1个斐波那契数，末尾不换行
 
     
   
